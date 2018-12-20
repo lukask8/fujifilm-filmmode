@@ -1,7 +1,8 @@
 #!/bin/bash
-# Print Film mode from Fujifim JPG
+# Print and write film mode from Fujifim JPG to IPTC and XMP keywords format
+#
 # Usage :
-# $ ./getPictureInfo.sh *.JPG
+# $ ./writePictureInfo.sh *.JPG
 #
 # Thanks to "exiftool -v2 option" you get useful info from tags:
 #
@@ -25,10 +26,10 @@
 if [ -z "$1" ]
   then
     echo ""
-    echo "	Print Film mode from Fujifim JPG file"
+    echo "	Print Film mode from Fujifim JPG file and write result to IPTC and XMP keywords format"
     echo ""
     echo "	Usage:"
-    echo "	$ ./getPictureInfo.sh *.JPG"
+    echo "	$ ./writePictureInfo.sh *.JPG"
     echo ""
     exit 0
 fi
