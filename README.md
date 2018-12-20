@@ -4,6 +4,12 @@ Print Film mode from Fujifim JPG.
 
 ## Usage :
 
+1. Download bash script
+1. execute ```$ chmod +x getPictureInfo.sh```
+1. execute ```$ chmod +x writePictureInfo.sh```
+
+Run as:
+
 ```
 $ ./getPictureInfo.sh *.JPG
 $ ./writePictureInfo.sh *.JPG
