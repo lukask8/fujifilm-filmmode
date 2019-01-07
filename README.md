@@ -59,6 +59,7 @@ X-T100 Format
 
 ```
 CustomRendered = 1 + Saturation = 768 = 0x300 => B&W
+CustomRendered = 1 + Saturation = 769 = 0x301 => B&W R
 CustomRendered = 1 + Saturation = 770 = 0x301 => B&W Y
 CustomRendered = 1 + Saturation = 771 = 0x303 => B&W G
 ```
