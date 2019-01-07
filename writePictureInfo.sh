@@ -10,6 +10,7 @@
 # - Saturation = 771 - Tag 0x1003 (2 bytes, int16u[1])
 #
 # CustomRendered = 1 + Saturation = 768 = 0x300 => B&W
+# CustomRendered = 1 + Saturation = 769 = 0x301 => B&W R
 # CustomRendered = 1 + Saturation = 770 = 0x301 => B&W Y
 # CustomRendered = 1 + Saturation = 771 = 0x303 => B&W G
 #
@@ -50,6 +51,12 @@ do
 					echo "$i" - "B&W"
     			    PROCESSED=$((PROCESSED+1))
 				fi
+				if  [[ "$output" == *"= 769"* ]] ; then
+					keys="B&W-R"
+					exiftool -XMP:Subject-=$keys -IPTC:keywords-=$keys -XMP:Subject+=$keys  -IPTC:keywords+=$keys "$i"
+					echo "$i" - "B&W"
+    			    PROCESSED=$((PROCESSED+1))
+				fi				
 				if  [[ "$output" == *"= 770"* ]] ; then
 					keys="B&W-Y"
 					exiftool -XMP:Subject-=$keys -IPTC:keywords-=$keys -XMP:Subject+=$keys  -IPTC:keywords+=$keys "$i"
