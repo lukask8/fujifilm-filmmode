@@ -9,6 +9,7 @@
 # - Saturation = 771 - Tag 0x1003 (2 bytes, int16u[1])
 #
 # CustomRendered = 1 + Saturation = 768 => B&W
+# CustomRendered = 1 + Saturation = 769 => B&W R
 # CustomRendered = 1 + Saturation = 770 => B&W Y
 # CustomRendered = 1 + Saturation = 771 => B&W G
 #
@@ -48,6 +49,10 @@ do
 					echo "$i" - "B&W"
     			    PROCESSED=$((PROCESSED+1))
 				fi
+				if  [[ "$output" == *"= 769"* ]] ; then
+					echo "$i" - "B&W R"
+    			    PROCESSED=$((PROCESSED+1))
+				fi				
 				if  [[ "$output" == *"= 770"* ]] ; then
 					echo "$i" - "B&W Y"
     			    PROCESSED=$((PROCESSED+1))
