@@ -14,6 +14,7 @@ Run as:
 $ ./getPictureInfo.sh *.JPG
 $ ./writePictureInfo.sh *.JPG
 ```
+Make sure "exiftool" package is installed!
 
 ## Example
 
