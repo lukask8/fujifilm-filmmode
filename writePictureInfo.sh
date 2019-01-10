@@ -54,7 +54,7 @@ do
 				if  [[ "$output" == *"= 769"* ]] ; then
 					keys="B&W-R"
 					exiftool -XMP:Subject-=$keys -IPTC:keywords-=$keys -XMP:Subject+=$keys  -IPTC:keywords+=$keys "$i"
-					echo "$i" - "B&W"
+					echo "$i" - "B&W R"
     			    PROCESSED=$((PROCESSED+1))
 				fi				
 				if  [[ "$output" == *"= 770"* ]] ; then
