@@ -47,25 +47,25 @@ do
 				output=`exiftool -v2 "$i" | grep  "Saturation ="`
 				if  [[ "$output" == *"= 768"* ]] ; then
 					keys="B&W"
-					exiftool -XMP:Subject-=$keys -IPTC:keywords-=$keys -XMP:Subject+=$keys  -IPTC:keywords+=$keys "$i"
+					exiftool -IPTC:keywords-=$keys -IPTC:keywords+=$keys "$i"
 					echo "$i" - "B&W"
     			    PROCESSED=$((PROCESSED+1))
 				fi
 				if  [[ "$output" == *"= 769"* ]] ; then
 					keys="B&W-R"
-					exiftool -XMP:Subject-=$keys -IPTC:keywords-=$keys -XMP:Subject+=$keys  -IPTC:keywords+=$keys "$i"
+					exiftool -IPTC:keywords-=$keys -IPTC:keywords+=$keys "$i"
 					echo "$i" - "B&W R"
     			    PROCESSED=$((PROCESSED+1))
 				fi				
 				if  [[ "$output" == *"= 770"* ]] ; then
 					keys="B&W-Y"
-					exiftool -XMP:Subject-=$keys -IPTC:keywords-=$keys -XMP:Subject+=$keys  -IPTC:keywords+=$keys "$i"
+					exiftool -IPTC:keywords-=$keys -IPTC:keywords+=$keys "$i"
 					echo "$i" - "B&W Y"
     			    PROCESSED=$((PROCESSED+1))
 				fi
 				if  [[ "$output" == *"= 771"* ]] ; then
 					keys="B&W-G"
-					exiftool -XMP:Subject-=$keys -IPTC:keywords-=$keys -XMP:Subject+=$keys  -IPTC:keywords+=$keys "$i"
+					exiftool -IPTC:keywords-=$keys -IPTC:keywords+=$keys "$i"
 					echo "$i" - "B&W G"
     			    PROCESSED=$((PROCESSED+1))
 				fi				
@@ -74,37 +74,37 @@ do
 				output=`exiftool -v2 "$i" | grep  "FilmMode = "`
 				if [[ "$output" == *"= 0"* ]]; then
 					keys="Provia"
-					exiftool -XMP:Subject-=$keys -IPTC:keywords-=$keys -XMP:Subject+=$keys  -IPTC:keywords+=$keys "$i"				
+					exiftool -IPTC:keywords-=$keys -IPTC:keywords+=$keys "$i"				
 				  	echo "$i" - "Provia/Standard"
 				    PROCESSED=$((PROCESSED+1))				  	
 				else 
 					if [[ "$output" == *"= 512"* ]]; then
 						keys="Velvia"
-						exiftool -XMP:Subject-=$keys -IPTC:keywords-=$keys -XMP:Subject+=$keys  -IPTC:keywords+=$keys "$i"							
+						exiftool  -IPTC:keywords-=$keys -IPTC:keywords+=$keys "$i"							
 				  		echo "$i" - "Velvia/Vivid"	
 					    PROCESSED=$((PROCESSED+1))
 				  	else
 						if [[ "$output" == *"= 288"* ]]; then
 							keys="Astia"
-							exiftool -XMP:Subject-=$keys -IPTC:keywords-=$keys -XMP:Subject+=$keys  -IPTC:keywords+=$keys "$i"										
+							exiftool  -IPTC:keywords-=$keys   -IPTC:keywords+=$keys "$i"										
 				  			echo "$i" - "Astia/Soft"
 						    PROCESSED=$((PROCESSED+1))				  			
 				  		else
 				  			if [[ "$output" == *"= 1536"* ]]; then
 								keys="ClassicChrome"
-								exiftool -XMP:Subject-=$keys -IPTC:keywords-=$keys -XMP:Subject+=$keys  -IPTC:keywords+=$keys "$i"						  			
+								exiftool -IPTC:keywords-=$keys   -IPTC:keywords+=$keys "$i"						  			
 				  				echo "$i" - "Classic Chrome"
   							    PROCESSED=$((PROCESSED+1))				  				
 				  			else
 				  				if [[ "$output" == *"= 1281"* ]]; then
 									keys="NegHi"
-									exiftool -XMP:Subject-=$keys -IPTC:keywords-=$keys -XMP:Subject+=$keys  -IPTC:keywords+=$keys "$i"			
+									exiftool -IPTC:keywords-=$keys   -IPTC:keywords+=$keys "$i"			
 				  					echo "$i" - "Neg Hi"
    	  							    PROCESSED=$((PROCESSED+1))
 				  				else
 				  					if [[ "$output" == *"= 1280"* ]]; then
 										keys="NegLow"
-										exiftool -XMP:Subject-=$keys -IPTC:keywords-=$keys -XMP:Subject+=$keys  -IPTC:keywords+=$keys "$i"							  					
+										exiftool -IPTC:keywords-=$keys -IPTC:keywords+=$keys "$i"							  					
 				  						echo "$i" - "Neg Low"
     	  							    PROCESSED=$((PROCESSED+1))
 				  					fi
