@@ -54,7 +54,6 @@ do
 		if   [  -n "$output"  ] ; then
 				# B&W
 				output=`exiftool -v2 "$i" | grep  "Saturation ="`
-				echo "$output"
 				if  [[ "$output" == *"= 768"* ]] ; then
 					echo "$i" - "B&W"
     			    PROCESSED=$((PROCESSED+1))
@@ -94,7 +93,6 @@ do
 		else 
 				# Color film
 				output=`exiftool -v2 "$i" | grep  "FilmMode = "`
-				echo "$output"
 				if [[ "$output" == *"= 0"* ]]; then
 				  	echo "$i" - "Provia/Standard"
 				    PROCESSED=$((PROCESSED+1))				  	
