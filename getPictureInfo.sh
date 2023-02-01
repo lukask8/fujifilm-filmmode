@@ -10,7 +10,7 @@
 #
 # CustomRendered = 1 + Saturation = 768 => B&W
 # CustomRendered = 1 + Saturation = 769 => B&W R
-# CustomRendered = 1 + Saturation = 770 => B&W Y
+# CustomRendered = 1 + Saturation = 770 => B&W Ye
 # CustomRendered = 1 + Saturation = 771 => B&W G
 # CustomRendered = 1 + Saturation = 784 => Sepia
 # CustomRendered = 1 + Saturation = 1280 => Acros
@@ -63,7 +63,7 @@ do
     			    PROCESSED=$((PROCESSED+1))
 				fi				
 				if  [[ "$output" == *"= 770"* ]] ; then
-					echo "$i" - "B&W Y"
+					echo "$i" - "B&W Ye"
     			    PROCESSED=$((PROCESSED+1))
 				fi
 				if  [[ "$output" == *"= 771"* ]] ; then
