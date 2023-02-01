@@ -29,6 +29,7 @@
 # 1792 => Eterna/Cinema
 # 2048 => Classic Neg
 # 2304 => Eterna Bleach Bypass
+# 2560 => Nostalgic Neg
 
 
 
@@ -128,6 +129,10 @@ do
 				fi
 				if [[ "$output" == *"= 2304"* ]]; then
 					echo "$i" - "Eterna Bleach Bypass"
+					PROCESSED=$((PROCESSED+1))
+				fi
+				if [[ "$output" == *"= 2560"* ]]; then
+					echo "$i" - "Nostalgic Neg"
 					PROCESSED=$((PROCESSED+1))
 				fi
 		fi
