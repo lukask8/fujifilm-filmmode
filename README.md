@@ -94,3 +94,7 @@ Format
 
 Please send me feedback if you test this script on your own jpeg files.
 If you own other fuji please send me results or send me some JPG or ```exiftool -v2``` output with your additional notes.
+
+# Greetings
+Thanks to Hijae Song hijae (https://github.com/hijae) for adding new formats
+
