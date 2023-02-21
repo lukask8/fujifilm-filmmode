@@ -56,28 +56,37 @@ Thanks to "exiftool -v2 option" you get useful info from "Maker" tags.
 - CustomRendered - Tag 0xa401 (2 bytes, int16u[1])
 - Saturation - Tag 0x1003 (2 bytes, int16u[1])
 
-X-T100 Format
+Format
 
 ```
 CustomRendered = 1 + Saturation = 768 = 0x300 => B&W
 CustomRendered = 1 + Saturation = 769 = 0x301 => B&W R
-CustomRendered = 1 + Saturation = 770 = 0x301 => B&W Y
+CustomRendered = 1 + Saturation = 770 = 0x301 => B&W Ye
 CustomRendered = 1 + Saturation = 771 = 0x303 => B&W G
+CustomRendered = 1 + Saturation = 784 = 0x310 => Sepia
+CustomRendered = 1 + Saturation = 1280 = 0x500 => Acros
+CustomRendered = 1 + Saturation = 1281 = 0x501 => Acros R
+CustomRendered = 1 + Saturation = 1282 = 0x502 => Acros Ye
+CustomRendered = 1 + Saturation = 1283 = 0x503 => Acros G
 ```
 
 ## Tags for colors
 
 - FilmMode - Tag 0x1401 (2 bytes, int16u[1])
 
-X-T100 Format
+Format
 
 ```
 0 => Provia/Standard
 512 = 0x200 => Velvia/Vivid
 288 = 0x120 => Astia/Soft
 1536 = 0x600 => Classic Chrome
-1281 = 0x501=> Neg Hi
-1280 = 0x500 => Neg Low
+1281 = 0x501=> Pro Neg Hi
+1280 = 0x500 => Pro Neg Std
+1792 = 0x700 => Eterna/Cinema
+2048 = 0x800 => Classic Neg
+2304 = 0x900 => Eterna Bleach Bypass
+2560 = 0xa00 => Nostalgic Neg
 ```
 
 
